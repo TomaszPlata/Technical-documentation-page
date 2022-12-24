@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Really Basic Linux Commands</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <img src="https://www.pngplay.com/wp-content/uploads/13/Linux-Logo-Transparent-Background.png" alt="linux penguin logo"/>
+      <header>Basic Linux Commands</header>
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#Linux_Shell" class="nav-link">Linux Shell</a>
+      <a href="#Pwd_command" class="nav-link">Pwd Command</a>
+      <a href="#Ls_command" class="nav-link">Ls Command</a>
+      <a href="#Cd_command" class="nav-link">Cd Command</a>
+      <a href="#Touch_command" class="nav-link">Touch Command</a>
+      <a href="#Mkdir_and_rmdir" class="nav-link">Mkdir and rmdir</a>
+      <a href="#Man_command" class="nav-link">Man Command</a>
+      <a href="#Locate_command" class="nav-link">Locate Command</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Linux is a family of open-source Unix operating systems based on the Linux Kernel. Currently the most popular distros are:</p> 
+          <ul>
+            <li>MX Linux</li>
+            <li>EndeavourOS</li>
+            <li>Mint</li>
+            <li>Manjaro</li>
+            <li>Pop!_OS</li>
+            <li>Fedora</li>
+            <li>Ubuntu</li>
+          </ul>
+<p>Linux is mainly used in servers. About 90% of the internet is powered by Linux servers. This is because Linux is fast, secure, and free! The main problem of using Windows servers are their cost. This is solved by using Linux servers. The OS that runs in about 80% of the smartphones in the world, Android, is also made from the Linux kernel. Most of the viruses in the world run on Windows, but not on Linux!</p>  
+        <p>When operating Linux, you need to use a shell – a program that gives you access to the operating system’s services. Most Linux distributions use a graphical user interface (GUI), making them beginner-friendly. However, it's better to use the command-line interface (CLI) because it’s quicker and offers more control. Tasks that require multiple steps on the GUI can be done in a matter of seconds by entering commands into the CLI.</p> 
+      </section>
+      <section class="main-section" id="Linux_Shell">
+        <header>Linux Shell</header> 
+        <p>A Shell provides you with an interface to the Unix system. It gathers input from you and executes programs based on that input. When a program finishes executing, it displays that program's output.</p> 
+        <p>Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.</p> 
+      </section>
+      <section class="main-section" id="Pwd_command">
+        <header>Pwd Command</header> 
+        <p>When you first open the terminal, you are in the home directory of your user. To know which directory you are in, you can use the <code>pwd</code> command. It gives us the absolute path, which means the path that starts from the root. The root is the base of the Linux file system. It is denoted by a forward slash( / ). The user directory is usually something like: </p><code>$ /home/username</code>  
+      </section>
+      <section class="main-section" id="Ls_command">
+        <header>Ls Command</header> 
+        <p> Use the <code>ls</code> command to know what files are in the directory you are in. You can see all the hidden files by using the command</p> <code>$ ls -a</code> 
+      </section>
+      <section class="main-section" id="Cd_command">
+        <header>Cd Command</header>
+        <p>To navigate through the Linux files and directories, use the <code>cd</code> command. Depending on your current working directory, it requires either the full path or the directory name. Running this command without an option will take you to the home folder. Keep in mind that only users with sudo privileges can execute it.</p> 
+      <p>Let’s say you’re in <code>/home/username/Documents</code> and want to go to Photos, a subdirectory of Documents. To do so, enter the following command: </p><code>$ cd Photos</code>  
+      </section>
+      <section class="main-section" id="Touch_command">
+        <header>Touch Command</header>
+        <p>The touch command is used to create a file. It can be anything, from an empty txt file to an empty zip file. For example </p><code>$ touch newfile.txt</code>
+      </section>
+      <section class="main-section" id="Mkdir_and_rmdir">
+        <header>Mkdir and rmdir</header>
+        <p>Use the mkdir command to create one or multiple directories at once and set permissions for each of them. The user executing this command must have the privilege to make a new folder in the parent directory, or they may receive a permission denied error.</p>
+        <p>For example, you want to create a directory called Music: </p><code>$ mkdir Music</code>
+        <p>To permanently delete an empty directory, use the <code>rmdir</code> command. Remember that the user running this command should have sudo privileges in the parent directory.
+
+For example, you want to remove an empty subdirectory named <code>personal1</code> and its main folder mydir: </p><code>$ rmdir -p mydir/personal1</code>
+      </section>
+      <section class="main-section" id="Man_command">
+        <header>Man Command</header>
+        <p><code>Man</code> is the system's manual pager. Each page argument given to man is normally the name of a program, utility or function. The manual page associated with each of these arguments is then found and displayed. A section, if provided, will direct man to look only in that section of the manual. The default action is to search in all of the available sections, following a pre-defined order and to show only the first page found, even if page exists in several sections.</p>
+        <p>To Display the manual page for the item (program) ls :</p><code>$ man -a intro</code>
+      </section>
+      <section class="main-section" id="Locate_command">
+        <header>Locate Command</header>
+        <p><code>locate</code> command in Linux is used to find the files by name. There is two most widely used file searching utilities accessible to users are called find and locate. The locate utility works better and faster than find command counterpart because instead of searching the file system when a file search is initiated, it would look through a database. This database contains bits and parts of files and their corresponding paths on your system. By default, locate command does not check whether the files found in the database still exist and it never reports files created after the most recent update of the relevant database.</p>
+        <p>For example Search a file with specific name: </p><code>$ locate sample.txt </code>
+      </section>
+    </main>
+  </body>
+</html>
